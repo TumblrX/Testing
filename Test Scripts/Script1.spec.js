@@ -8,7 +8,7 @@ describe("login",function(){
         cy.visit('https://www.tumblr.com/')
         cy.get('.Fygd5 .Z8Ux2').contains('Log in').click({force: true})
         cy.get('input[name="email"]').type("mennaahmedali77@gmail.com").should("be.visible")
-        cy.get('input[name="password"]').type("66332111menna").should("be.visible")
+        cy.get('input[name="password"]').type("menna").should("be.visible")
         cy.get('.EvhBA').contains('Log in').click({force: true})
         
     })
