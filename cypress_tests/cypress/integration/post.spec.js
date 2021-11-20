@@ -4,12 +4,12 @@
 import{signIn} from'../../support/settings_func'
 import{getPosts,findPost,deletePost,countPosts} from'../../support/post_func'
 
-import { post_variables } from '../../support/post_mapping_var'
+import { POST_VARIABLES } from '../../support/post_mapping_var'
 
 describe("Post Create Edit",function(){
     it("sign in",function(){
 
-        signIn(post_variables.password,post_variables.email)
+        signIn(POST_VARIABLES.password,POST_VARIABLES.email)
        
     })
     // Go to posts from the search bar icon
@@ -27,12 +27,12 @@ describe("Post Create Edit",function(){
     //find specific post
     it("Find post",function(){
 
-        findPost(post_variables.post_id,'second post')
+        findPost(POST_VARIABLES.POST_ID,'second post')
 
     })
     //delete specific post
     it("delete post",function(){
-     deletePost(post_variables.post_id)
+     deletePost(POST_VARIABLES.POST_ID)
      countPosts(1)
     })
 

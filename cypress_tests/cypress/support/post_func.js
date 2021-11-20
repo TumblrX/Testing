@@ -1,14 +1,14 @@
 
-import { post_variables  } from './post_mapping_var';
+import { POST_VARIABLES  } from './post_mapping_var';
 
 
 /**
- * This fnction test get posts from the search bar account > posts 
+ * This function test get posts from the search bar account > posts,
  */
 
 export function getPosts(){
-    cy.get(post_variables.account_icon).click({multiple: true})
-    cy.get(post_variables.posts_page).click({force: true})
+    cy.get(POST_VARIABLES.ACCOUNT_ICON).click({multiple: true})
+    cy.get(POST_VARIABLES.POSTS_PAGE).click({force: true})
 }
 
 /**
@@ -17,7 +17,7 @@ export function getPosts(){
  * @param {string}           specificWord  Specific word in the post.
  */
  export function findPost(postId,specificWord){
-    cy.get(post_variables.posts_block + '> div[data-id="'+postId+'"]').contains(specificWord)
+    cy.get(POST_VARIABLES.POSTS_BLOCK + '> div[data-id="'+postId+'"]').contains(specificWord)
 
 }
 /**
@@ -25,7 +25,7 @@ export function getPosts(){
  * @param {number}           count posts count
  */
  export function countPosts(count){
-    cy.get(post_variables.posts_block).children() // get direct decendents 
+    cy.get(POST_VARIABLES.POSTS_BLOCK).children() // get direct decendents 
     .should('have.length', count); // add assertion to have lenght of 5
 
 }
@@ -36,7 +36,7 @@ export function getPosts(){
 
  */
  export function deletePost(postId){
-    cy.get(post_variables.posts_block + '> div[data-id="'+postId+'"] >'+post_variables.delete_icon).click()
-    cy.get(post_variables.confirm_delete).click({force:true})
+    cy.get(POST_VARIABLES.POSTS_BLOCK + '> div[data-id="'+postId+'"] >'+POST_VARIABLES.DELETE_ICON).click()
+    cy.get(POST_VARIABLES.CONFIRM_DELETE).click({force:true})
 
 }

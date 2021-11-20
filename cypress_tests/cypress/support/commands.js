@@ -24,3 +24,11 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import 'cypress-iframe';
+import { workingSignUp } from './sign_up_func';
+
+/**
+ * this function allow us to test the ideal case
+ */
+Cypress.Commands.add('workingSignUp', function () {
+    workingSignUp()
+})
