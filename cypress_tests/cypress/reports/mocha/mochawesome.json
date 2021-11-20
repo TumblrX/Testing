@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-20T14:42:05.423Z",
+    "end": "2021-11-20T14:42:45.345Z",
+    "duration": 39922,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5ab66283-3f83-4d0f-a05d-6fcc42846dcb",
+      "title": "",
+      "fullFile": "cypress/integration/TumblrX/post.spec.js",
+      "file": "cypress/integration/TumblrX/post.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "42e9653c-a92b-4df3-af35-a933ce38d6f6",
+          "title": "Post Create Edit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "sign in",
+              "fullTitle": "Post Create Edit sign in",
+              "timedOut": null,
+              "duration": 5832,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _settings_func.signIn)(_post_mapping_var.POST_VARIABLES.password, _post_mapping_var.POST_VARIABLES.email);",
+              "err": {},
+              "uuid": "31638c9c-16ee-4390-9739-4755b72d8eac",
+              "parentUUID": "42e9653c-a92b-4df3-af35-a933ce38d6f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "get posts",
+              "fullTitle": "Post Create Edit get posts",
+              "timedOut": null,
+              "duration": 14295,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _post_func.getPosts)();",
+              "err": {},
+              "uuid": "857690e0-f0df-47a5-bbcc-fa945bd285b4",
+              "parentUUID": "42e9653c-a92b-4df3-af35-a933ce38d6f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "count posts",
+              "fullTitle": "Post Create Edit count posts",
+              "timedOut": null,
+              "duration": 1282,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _post_func.countPosts)(2);",
+              "err": {},
+              "uuid": "174b704e-198c-45fb-b2f4-f086a58ae278",
+              "parentUUID": "42e9653c-a92b-4df3-af35-a933ce38d6f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Find post",
+              "fullTitle": "Post Create Edit Find post",
+              "timedOut": null,
+              "duration": 1286,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _post_func.findPost)(_post_mapping_var.POST_VARIABLES.POST_ID, 'second post');",
+              "err": {},
+              "uuid": "cd054548-242a-4e46-bea3-61b0d7b4ec53",
+              "parentUUID": "42e9653c-a92b-4df3-af35-a933ce38d6f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "delete post",
+              "fullTitle": "Post Create Edit delete post",
+              "timedOut": null,
+              "duration": 509,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _post_func.deletePost)(_post_mapping_var.POST_VARIABLES.POST_ID);\n(0, _post_func.countPosts)(1);",
+              "err": {},
+              "uuid": "90af171b-bb6f-4148-bca6-0773962554bc",
+              "parentUUID": "42e9653c-a92b-4df3-af35-a933ce38d6f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "31638c9c-16ee-4390-9739-4755b72d8eac",
+            "857690e0-f0df-47a5-bbcc-fa945bd285b4",
+            "174b704e-198c-45fb-b2f4-f086a58ae278",
+            "cd054548-242a-4e46-bea3-61b0d7b4ec53",
+            "90af171b-bb6f-4148-bca6-0773962554bc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23204,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

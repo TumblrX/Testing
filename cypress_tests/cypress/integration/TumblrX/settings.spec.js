@@ -41,7 +41,7 @@ describe("change settings",function(){
         
     })
     //change password successfully
-    it.skip("successful change password",function(){
+    it("successful change password",function(){
         successfulChange(SETTINGS_VARIABLES.oldPassword,SETTINGS_VARIABLES.newPassword)
     })
 })

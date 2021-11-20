@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { invalidEmailSignUp, invalidPasswordSignUp, invalidBlogNameSignUp, invalidAgeSignUp } from '../support/sign_up_func';
+import { invalidEmailSignUp, invalidPasswordSignUp, invalidBlogNameSignUp, invalidAgeSignUp } from'../../support/sign_up_func'
 
 describe('Sign Up', () => {
   beforeEach(() => {
