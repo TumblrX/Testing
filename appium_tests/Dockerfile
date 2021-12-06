@@ -11,7 +11,8 @@ RUN pip3 install --upgrade pip
 
 RUN pip install Appium-Python-Client
 
-COPY ./appium_test ./appium_test
+RUN apt-get -y install xauth
 
-#CMD make run
+WORKDIR /appium_test
+
 
