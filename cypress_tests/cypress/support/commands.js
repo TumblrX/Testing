@@ -25,10 +25,17 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import 'cypress-iframe';
 import { workingSignUp } from './sign_up_func';
+import { workingLogIn } from './log_in_func';
 
 /**
- * this function allow us to test the ideal case
+ * this function allow us to test the ideal case for sign in
  */
 Cypress.Commands.add('workingSignUp', function () {
     workingSignUp()
+})
+/**
+ * this function allow us to test the ideal case for log in
+ */
+Cypress.Commands.add('workingLogIn', function () {
+    workingLogIn()
 })

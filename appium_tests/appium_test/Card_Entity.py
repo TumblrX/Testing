@@ -6,8 +6,8 @@ desired_cap = {
     "deviceName": "Nada",
     "automationName": "Appium",
     "appPackage": "com.tumblr",
-    "appActivity": "com.tumblr.ui.activity.RootActivity"
+    "appActivity": "androidx.room.MultiInstanceInvalidationService"
 }
 
 driver = webdriver.Remote("http://0.0.0.0:4723/wd/hub", desired_cap)
-driver.startActivity("com.tumblr", "com.tumblr.ui.activity.RootActivity")
+driver.startActivity("com.tumblr", "androidx.room.MultiInstanceInvalidationService")
