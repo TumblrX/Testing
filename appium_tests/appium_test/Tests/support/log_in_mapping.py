@@ -1,4 +1,4 @@
-FIRST_LOG_IN_BUTTON_ID = "//android.widget.Button[@content-desc=\"Log in with Email\"]" #"com.tumblr:id/login_button"
+FIRST_LOG_IN_BUTTON_ID = "com.tumblr:id/login_button"
 LOG_IN_WITH_EMAIL_ID = "com.tumblr:id/email_auth_button"
 INPUT_EMAIL_ID = "com.tumblr:id/email"
 INPUT_EMAIL_BUTTON_ID ="com.tumblr:id/primary_button"
