@@ -1,14 +1,7 @@
-driver = webdriver.Remote("http://localhost:4723/wd/hub",desiredcap)
+from support import log_in_func
 
-driver.find_element_by_id("com.tumblr:id/login_button").click()
-driver.implicitly_wait(30)
-driver.find_element_by_id("com.tumblr:id/email_auth_button").click()
-driver.implicitly_wait(30)
-driver.find_element_by_id("com.tumblr:id/email").send_keys("mennaahmedali77@gmail.com")
-driver.find_element_by_id("com.tumblr:id/primary_button").click()
-driver.implicitly_wait(30)
-driver.find_element_by_id("com.tumblr:id/use_password_button").click()
-driver.implicitly_wait(50)
-driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.MultiAutoCompleteTextView").send_keys('211257mennamenna')
-driver.implicitly_wait(50)
-driver.find_element_by_id("com.tumblr:id/action_button").click()
+log_in_func.invaled_email("nadaelsayed@ex", "That email doesn't have a Tumblr account. Sign up now?")
+# log_in_func.invaled_email("", )
+log_in_func.false_password("1111", "Incorrect email address or password. Please try again")
+log_in_func.working_log_in("nadaelsayed@gmail.com", "nadaelsayed147258369")
+
