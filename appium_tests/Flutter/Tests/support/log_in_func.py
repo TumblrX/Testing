@@ -31,8 +31,8 @@ def invalid_email(email, msg):
       
     text = driver.find_element_by_accessibility_id(log_in_mapping.ERROR_MESSAGE_FOR_EMAIL_ACC_ID).get_attribute('content-desc')
     
-    assert msg, text
-    return 
+    # assert msg, text
+    return text
 
 def empty_email(email,password, msg):
     """it tests false passwards with a valid email 
@@ -68,7 +68,7 @@ def empty_email(email,password, msg):
     driver.find_element_by_xpath(log_in_mapping.EMAIL_XPATH_AFTER_ERROR).click()
     text = driver.find_element_by_accessibility_id(log_in_mapping.EMPTY_EMAIL_EROR_MSG_ACC_ID).get_attribute('content-desc')
     assert msg, text
-    return
+    return text
 
 def empty_password(email,password, msg):
     """it tests false passwards with a valid email 
@@ -103,7 +103,7 @@ def empty_password(email,password, msg):
     driver.find_element_by_xpath(log_in_mapping.EMAIL_XPATH_AFTER_ERROR).click()
     text = driver.find_element_by_accessibility_id(log_in_mapping.ERROR_MESSAGE_FOR_PASSWORD_ACC_ID).get_attribute('content-desc')
     assert msg, text
-    return
+    return text
 
 def wrong_email_or_pass(email,password, msg):
     """it tests false passwards with a valid email 
@@ -139,7 +139,7 @@ def wrong_email_or_pass(email,password, msg):
     driver.find_element_by_xpath(log_in_mapping.EMAIL_XPATH_AFTER_ERROR).click()
     text = driver.find_element_by_accessibility_id(log_in_mapping.WRONG_EMAIL_OR_PASS_ACC_ID).get_attribute('content-desc')
     assert msg, text
-    return
+    return text
 def working_log_in(email, password):
     """it tests ideal case to log in with correct email and password 
     Parameters
@@ -167,7 +167,11 @@ def working_log_in(email, password):
     driver.implicitly_wait(30)
 
     driver.find_element_by_xpath(log_in_mapping.SCROLL_VIEW_XPATH).click()
-    driver.find_element_by_xpath(log_in_mapping.LOGIN_BUTTON_XPATH).click()
+    try:
+        driver.find_element_by_xpath(log_in_mapping.LOGIN_BUTTON_XPATH).click()
+    except:
+        return "An exception occurred"
+
     driver.implicitly_wait(30)
 
-    return
+    return True
