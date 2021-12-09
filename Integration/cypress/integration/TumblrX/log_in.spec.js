@@ -4,7 +4,7 @@ import { invalidEmailLogIn, invalidPasswordLogIn } from'../../support/log_in_fun
 
 describe('Log In', () => {
   beforeEach(() => {
-    cy.visit('https://www.tumblr.com')
+    cy.visit('http://tumblrx.me/')
   })
   it("invalid email log in", function () {
     invalidEmailLogIn("nadaelsayed163@ex", 'Your email or password were incorrect.')

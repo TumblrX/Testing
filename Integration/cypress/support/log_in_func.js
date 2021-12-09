@@ -6,8 +6,8 @@ import { VARIABLES } from './log_in_mapping_var';
  */
 export function workingLogIn() {
     cy.get(VARIABLES.BEGIN_LOG_IN).contains('Log in').click({ force: true })
-    cy.get(VARIABLES.INPUT_EMAIL).type("nadaelsayed163@gmail.com").should("be.visible")
-    cy.get(VARIABLES.INPUT_PASSWORD).click({ force: true }).type("nadaelsayed147258369").should("be.visible")
+    cy.get(VARIABLES.INPUT_EMAIL).type("example@example.com").should("be.visible")
+    cy.get(VARIABLES.INPUT_PASSWORD).click({ force: true }).type("123456").should("be.visible")
     cy.get(VARIABLES.LOG_IN_ACTION).contains('Log in').click({ force: true })
     cy.url().should('include', '/dashboard')
 }
@@ -23,7 +23,11 @@ export function invalidEmailLogIn(emailOption, msg) {
     }
     cy.get(VARIABLES.INPUT_PASSWORD).click({ force: true }).type("nadaelsayed147258369").should("be.visible")
     cy.get(VARIABLES.LOG_IN_ACTION).contains('Log in').click({ force: true })
-    cy.get(VARIABLES.ERROR_MSG_FIRST).contains(msg)
+    if(emailOption == ""){
+        cy.get(VARIABLES.ERROR_MSG_EMPTY_EMAIL).contains(msg)
+    }else{
+        cy.get(VARIABLES.ERROR_MSG_WRONG_DATA).contains(msg)
+    }
 }
 /**
  * this function allow us to change password and other parameter will be ideal
@@ -37,5 +41,9 @@ export function invalidPasswordLogIn(passOption, msg) {
         cy.get(VARIABLES.INPUT_PASSWORD).click({ force: true }).type(passOption).should("be.visible")
     }
     cy.get(VARIABLES.LOG_IN_ACTION).contains('Log in').click({ force: true })
-    cy.get(VARIABLES.ERROR_MSG_FIRST).contains(msg)
+    if(passOption == ""){    
+        cy.get(VARIABLES.ERROR_MSG_EMPTY_PASSWORD).contains(msg)
+    }else{
+        cy.get(VARIABLES.ERROR_MSG_WRONG_DATA).contains(msg)
+    }
 }
