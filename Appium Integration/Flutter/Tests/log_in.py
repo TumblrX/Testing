@@ -12,7 +12,7 @@ class TestLogin(unittest.TestCase):
     def test_empty_password(self):
         self.assertEqual(log_in_func.empty_password("mennaahmedali77@gmail.com","", "Please enter some text"), "Please enter some text")
     def test_working_log_in(self):
-        self.assertTrue(log_in_func.working_log_in("nadaelsayed@gmail.com", "nadaelsayed147258369"))
+        self.assertTrue(log_in_func.working_log_in("example@example.com", "123456"))
 
 
 if __name__ == '__main__':
