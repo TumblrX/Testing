@@ -22,8 +22,12 @@ def invalid_email(email):
     driver.find_element_by_id(log_in_mapping.INPUT_PASSWORD_ID).send_keys("123456789")
     driver.implicitly_wait(30)
     driver.find_element_by_id(log_in_mapping.LOG_IN_BUTTON_ID).click()
-    driver.implicitly_wait(30)
-    text = driver.find_element_by_id(log_in_mapping.ERROR_MESSAGE_FOR_EMAIL_ID).text 
+    driver.implicitly_wait(50)
+    if(email == ""):
+        text = driver.find_element_by_id(log_in_mapping.ERROR_MISSING_MESSAGE_ID).text
+    else:
+        text = driver.find_element_by_id(log_in_mapping.ERROR_WRONG_MESSAGE_ID).text
+ 
     # assert msg, text
     return text
 
@@ -46,7 +50,11 @@ def false_password(password):
     driver.implicitly_wait(50)    
     driver.find_element_by_id(log_in_mapping.LOG_IN_BUTTON_ID).click()
     driver.implicitly_wait(50)
-    text = driver.find_element_by_id(log_in_mapping.ERROR_MESSAGE_FOR_EMAIL_ID).text
+    if(password == ""):
+        text = driver.find_element_by_id(log_in_mapping.ERROR_MISSING_MESSAGE_ID).text
+    else:
+        text = driver.find_element_by_id(log_in_mapping.ERROR_WRONG_MESSAGE_ID).text
+
     # assert msg, text
     # text = driver.find_element_by_id(log_in_mapping.ERROR_MESSAGE_FOR_PASSWORD_ID).text
     # assert msg, text

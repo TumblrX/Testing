@@ -1,10 +1,11 @@
 pip install pytest
 pip install pytest-html
 pip install coverage
-pip install pytest-conv
+pip install pytest-conv // مانزلتش
 
 ## commands
 
 pytest -v -s --html=Reports/report.html log_in.py
+coverage html -d Reports/coverage_html
 
 ## refer to this link for usfel commands : https://coverage.readthedocs.io/en/coverage-4.3.3/cmd.html

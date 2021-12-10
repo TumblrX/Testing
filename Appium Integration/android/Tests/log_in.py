@@ -5,11 +5,11 @@ class TestLogin(unittest.TestCase):
     def test_invalid_email(self):
         self.assertEqual(log_in_func.invalid_email("mennaahmedali@ex"), "Incorrect email address or password. Please try again.")
     def test_empty_email(self):
-        self.assertEqual(log_in_func.invalid_email(""), "Incorrect email address or password. Please try again.")
+        self.assertEqual(log_in_func.invalid_email(""), "Make sure both fields are filled.")
     def test_wrong_email_or_pass(self):
         self.assertEqual(log_in_func.false_password("123"), "Incorrect email address or password. Please try again.")
     def test_empty_password(self):
-        self.assertEqual(log_in_func.false_password(""), "Incorrect email address or password. Please try again.")
+        self.assertEqual(log_in_func.false_password(""), "Make sure both fields are filled.")
     def test_working_log_in(self):
         self.assertTrue(log_in_func.working_log_in("example@example.com", "123456"))
 
