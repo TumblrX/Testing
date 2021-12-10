@@ -1,0 +1,7 @@
+FIRST_LOG_IN_BUTTON_ID = "com.example.android.tumblrx2:id/btn_login"
+LOG_IN_WITH_EMAIL_ID = "com.example.android.tumblrx2:id/btn_login_email"
+INPUT_EMAIL_ID = "com.example.android.tumblrx2:id/et_email"
+# ERROR_MESSAGE_FOR_EMAIL_ID = "com.tumblr:id/action_message_text"
+INPUT_PASSWORD_ID = "com.example.android.tumblrx2:id/et_password"
+LOG_IN_BUTTON_ID = "com.example.android.tumblrx2:id/btn_login"
+# ERROR_MESSAGE_FOR_PASSWORD_ID = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.TextView"
