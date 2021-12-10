@@ -1,5 +1,3 @@
-from appium import webdriver
-from ..desiredcapabilities import driver ,driver_startActivity,desired_cap
 from support import log_in_func
 import unittest
 
