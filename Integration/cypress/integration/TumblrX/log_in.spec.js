@@ -1,10 +1,11 @@
 /// <reference types="cypress" />
 
 import { invalidEmailLogIn, invalidPasswordLogIn } from'../../support/log_in_func'
+import { WEB_URL } from '../../url'
 
 describe('Log In', () => {
   beforeEach(() => {
-    cy.visit('http://tumblrx.me/')
+    cy.visit(WEB_URL)
   })
   it("invalid email log in", function () {
     invalidEmailLogIn("nadaelsayed163@ex", 'Your email or password were incorrect.')
