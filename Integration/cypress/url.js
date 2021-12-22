@@ -1,2 +1,2 @@
- /** @const */const WEB_URL = 'http://tumblrx.me/' //front:4000
+ /** @const */const WEB_URL = 'http://front:4000' //tumblrx.me
 module.exports = { WEB_URL }
