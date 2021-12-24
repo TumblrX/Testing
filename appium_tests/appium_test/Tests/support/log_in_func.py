@@ -1,15 +1,8 @@
 from appium import webdriver
 from unittest import TestCase
-from support import log_in_mapping
+from support import log_in_mapping, desiredcapabilities
 
-desiredcap = {
-    "platformName": "Android",
-    "platformVersion": "10.0",
-    "deviceName": "Nada",
-    "automationName": "Appium"
-}
-
-driver = webdriver.Remote("http://localhost:4723/wd/hub",desiredcap)
+driver = webdriver.Remote("http://localhost:4723/wd/hub",desiredcapabilities.desiredcap)
 
 def invaled_email(email, msg):
     """it tests invalid emails 
