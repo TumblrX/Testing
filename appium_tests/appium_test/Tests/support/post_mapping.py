@@ -30,7 +30,20 @@ class POST_VARIABLES():
 
     LIKE_BUTTON_ID = "com.tumblr:id/post_control_likes"
     LIKE_BUTTON_XPATH = "(//android.widget.ImageButton[@content-desc=\"Like\"])"
-
-
     ############## ADD_COMMENT ############################
     COMMENT_BUTTON_ID = "com.tumblr:id/post_control_comment"
+    REPLY_MESSAGE_ID = "com.tumblr:id/reply_message"
+    REPLY_BUTTON_ID = "com.tumblr:id/reply_button"
+    ################ SEND AS MESSAGE ###################
+    SEND_AS_MESSAGE_ID = "com.tumblr:id/post_control_share_to_msg"
+    SEARCH_INPUT_ID = "com.tumblr:id/search_input"
+    SHAREING_MESSAGE_IN_ID = "com.tumblr:id/sharing_message_input"
+    FIRST_BLOG_NAME_XPATH = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]"
+    SHAREING_SEND_BUTTON_ID ="com.tumblr:id/sharing_send_button"
+    ############### REBLOG ##############################
+    REBLOG_BUTTON_ID = "com.tumblr:id/post_control_reblog"
+    TEXT_XPATH = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText"
+    REBLOG_ACTION_BUTTON_ID ="com.tumblr:id/action_button"
+    ############# loading ##############################
+    LOADING_PAGE_LINE_ID = "com.tumblr:id/loading_progress"
+    

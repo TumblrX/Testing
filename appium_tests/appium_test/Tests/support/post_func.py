@@ -94,59 +94,139 @@ def edit_post(text,new_text):
         count = count -1 
     return True
 
-# delete post given its text
+def loading_progress():
+    try:
+        driver.find_element_by_id(POST_VARIABLES.LOADING_PAGE_LINE_ID)
+        return True
+    except:
+        return False
+
+# delete post given its text - done #
 def delete_post(text):
-    
-    count = 0
+    navigate_to_posts()
+    txt = " "
+    end = False
+    print(end)
+    while (text != txt) and (not end):
+        txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
+        end = loading_progress()
+        driver.swipe(150,1000,150,200,6000)
+        print(end,text,txt)
+    if text == txt:
+        count = 1
+        while count >= 0:
+            driver.swipe(150,200,150,600,6000)
+            count = count -1 
+        driver.find_element_by_id(POST_VARIABLES.DELETE_BUTTON_ID).click()
+        driver.find_element_by_id(POST_VARIABLES.CONFIRM_DELETE_POST_BUTTON).click()
+    # just to change the page and return back to posts inorder to swipe without throwing error
+    navigate_to_posts()
+    # act as a refresh
+    count = 1
+    while count >= 0:
+        driver.swipe(150,200,150,400,6000)
+        count = count -1 
+    return True
+
+# add like to post given headline text in it - done #
+def add_like_post(text):
+
     driver.swipe(150,400,150,200,2000)
     txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
+    count = 0
     while text != txt:
+        count = count +1
+        driver.swipe(150,800,150,200,6000)
         txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
-        driver.swipe(150,800,150,200,2000)
-        count = count + 1
-    driver.find_element_by_id(POST_VARIABLES.DELETE_BUTTON_ID).click()
-    driver.find_element_by_id(POST_VARIABLES.CONFIRM_DELETE_POST_BUTTON).click()
+        print(text,txt)
+    count1 = 2
+    while count1 != 0:
+        print(count1)
+        driver.swipe(150,400,150,200,6000)
+        count1 = count1 - 1
+    driver.find_element_by_id(POST_VARIABLES.LIKE_BUTTON_ID).click()
+    # act as a refresh
     navigate_to_posts()
     while count >= 0:
-        print(count)
         driver.swipe(150,200,150,800,6000)
         count = count -1 
     return True
 
-def add_like_post(text):
-    
-    count = 0
-    temp = " "
-    txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
-    temp = txt
-    while text != txt:
-        driver.swipe(150,1000,150,200,6000)
-        txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
-        if temp != txt: count=count+1
-        temp = txt
-        print(count,txt)
-        
-    lis=driver.find_element_by_xpath(POST_VARIABLES.LIKE_BUTTON_XPATH+"["+str(count)+"]")
-    lis.click()
-
+# add comment to post given headline text in it - done #
 def add_comment_post(text,comment):
-    
+
+    navigate_to_posts()
     count = 0
-    driver.swipe(150,400,150,200,2000)
-    txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
+    txt =" "
     while text != txt:
         print(count)
         txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
-        driver.swipe(150,800,150,200,2000)
+        driver.swipe(150,400,150,200,6000)
         count = count + 1
+        print(text,txt)
+    count = 1
+    while count != 0:
+        print(count)
+        driver.swipe(150,400,150,200,6000)
+        count = count - 1
     driver.find_element_by_id(POST_VARIABLES.COMMENT_BUTTON_ID).click()
+    driver.implicitly_wait(50)
+    driver.find_element_by_id(POST_VARIABLES.REPLY_MESSAGE_ID).send_keys(comment)
+    driver.find_element_by_id(POST_VARIABLES.REPLY_BUTTON_ID).click()
+
+# send post as a message given headline text in it - done #
+def send_post(text):
+
+    navigate_to_posts()
+    count = 0
+    txt =" "
+    while text != txt:
+        print(count)
+        txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
+        driver.swipe(150,400,150,200,6000)
+        count = count + 1
+        print(text,txt)
+    count = 1
+    while count != 0:
+        print(count)
+        driver.swipe(150,400,150,200,6000)
+        count = count - 1
+
+    driver.find_element_by_id(POST_VARIABLES.SEND_AS_MESSAGE_ID).click()
+    driver.implicitly_wait(50)
+    driver.find_element_by_id(POST_VARIABLES.SHAREING_MESSAGE_IN_ID).send_keys("this post is shared by a text script")
+    driver.find_element_by_xpath(POST_VARIABLES.FIRST_BLOG_NAME_XPATH).click()
+    driver.find_element_by_id(POST_VARIABLES.SHAREING_SEND_BUTTON_ID).click()
+    
+# reblog a post given headline text in it - done #
+def reblog_post(text,text2):
+
+    navigate_to_posts()
+    count = 0
+    txt =" "
+    while text != txt:
+        print(count)
+        txt = driver.find_element_by_id(POST_VARIABLES.POST_TEXT_ID_FOR_DELETE).text
+        driver.swipe(150,400,150,200,6000)
+        count = count + 1
+        print(text,txt)
+    count = 1
+    while count != 0:
+        print(count)
+        driver.swipe(150,400,150,200,6000)
+        count = count - 1
+
+    driver.find_element_by_id(POST_VARIABLES.REBLOG_BUTTON_ID).click()
+    driver.implicitly_wait(50)
+    driver.find_element_by_xpath(POST_VARIABLES.TEXT_XPATH).send_keys(text2)
+    driver.find_element_by_id(POST_VARIABLES.REBLOG_ACTION_BUTTON_ID).click()
+    
 
 
-
-# function to create post given its text
-
+# function to create post given its text - done #
 def create_post(text):
     try:
+       navigate_to_posts()
        driver.find_element_by_id(POST_VARIABLES.COMPOSE_POST_BUTTON_ID).click()
        driver.implicitly_wait(20)
 
@@ -154,17 +234,25 @@ def create_post(text):
        driver.find_element_by_id(POST_VARIABLES.POST_BUTTON_ID).click()
 
        driver.find_element_by_xpath(POST_VARIABLES.POST_ICON_XPATH).click()
+       count = 1
+       while count >= 0:
+        print(count)
+        driver.swipe(150,200,150,800,6000)
+        count = count -1
        return True
     except:
         return False
 
-navigate_to_posts()
-# create_post("This post is created via a test script")
-# delete_post_by_search("This post is created via a test script")
+
+
+create_post("3")
+create_post("TEMP POST FOR DELETE")
+create_post("TEMP POST FOR DELETE2")
+delete_post("TEMP POST FOR DELETE")
+add_like_post("TEMP POST FOR DELETE2")
+add_comment_post("10","This comment is created via a test script woohwoooooooooooooooooo")
+send_post("8")
+reblog_post("10","rebloged via a test script")
 # edit_post("First post is edited by","First post")
 # edit_tag("1","First post")
-# delete_post("Third post")
-add_like_post("5")
-
-
  
