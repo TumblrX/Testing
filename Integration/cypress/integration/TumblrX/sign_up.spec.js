@@ -1,10 +1,11 @@
 /// <reference types="cypress" />
 
 import { invalidEmailSignUp, invalidPasswordSignUp, invalidBlogNameSignUp, invalidAgeSignUp } from'../../support/sign_up_func'
+import { WEB_URL } from '../../url'
 
 describe('Sign Up', () => {
   beforeEach(() => {
-    cy.visit('http://tumblrx.me:4000/')
+    cy.visit(WEB_URL)
   })
   it("invalid email sign up", function () {
     invalidEmailSignUp("nadaelsayed163@ex", 'That\'s not a valid email address. Please try again.')

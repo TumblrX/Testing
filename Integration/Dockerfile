@@ -4,8 +4,9 @@ WORKDIR /app
 COPY ./cypress ./cypress
 COPY ./cypress.json ./cypress.json
 COPY ./package.json ./package.json
-COPY ./node_modules ./node_modules
+#COPY ./node_modules ./node_modules
 COPY ./package-lock.json ./package-lock.json
+#CMD npm install
 
 #RUN npx cypress run
 #sudo chmod 777 /var/run/docker.sock
