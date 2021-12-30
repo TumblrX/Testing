@@ -2,13 +2,13 @@
 
 const { SETTINGS_VARIABLES } = require("../../support/settings_mapping_var")
 import {signIn, settingsIconClicked, doesntMatchPasswords, EmptyPasswordAndNoMatch, samePassword, easyGuessed,weakPassword,successfulChange, EmptyNewPassword } from '../../support/settings_func'
-
+import { WEB_URL } from '../../url'
 
 describe("change settings",function(){
     //sign into tumblr
     it("sign in",function(){
         
-        signIn(SETTINGS_VARIABLES.oldPassword,SETTINGS_VARIABLES.email)
+        signIn(SETTINGS_VARIABLES.oldPassword,SETTINGS_VARIABLES.email,WEB_URL)
        
     })
 
