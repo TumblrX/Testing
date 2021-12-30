@@ -17,7 +17,7 @@ describe('Sign Up', () => {
     invalidEmailSignUp(" ", 'That\'s not a valid email address. Please try again.')
   })
   it("taken email sign up", function () {
-    invalidEmailSignUp("nadaelsayed163@gmail.com", 'This email address is already in use.')
+    invalidEmailSignUp("test@test.com", 'This email address is already in use.')
   })
   it("small password sign up", function () {
     invalidPasswordSignUp("1234", 'The password must be at least 8 characters.')
