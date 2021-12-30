@@ -2,11 +2,11 @@
 import { SETTINGS_VARIABLES  } from './settings_mapping_var';
 import { WEB_URL } from '../../url'
 
-// /**
-//  * This fnction to sign in
-//  * @param {string}           password password 
-//  * @param {string}           email    email.
-//  */
+/**
+ * This fnction to sign in
+ * @param {string}           password password 
+ * @param {string}           email    email.
+ */
 
  export function signIn(password,email){
     cy.visit(WEB_URL)
