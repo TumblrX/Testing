@@ -2,13 +2,13 @@
 
 const { CUSTOMIZE_VARIABLES } = require("../../support/customize_mapping_var")
 import {signIn,customizeIconClicked,changeTitle,changeDescription,changeHeaderImage,changeAvatarSquare,changeAvatarCircle,changeBackground,changeTitleColor,showImageHeader} from '../../support/customize_func'
-
+import { WEB_URL } from '../../url'
 
 describe("Edit appearance",function(){
  
     // sign in into tumblr
     it("sign in",function(){
-        signIn(CUSTOMIZE_VARIABLES.password,CUSTOMIZE_VARIABLES.email)
+        signIn(CUSTOMIZE_VARIABLES.password,CUSTOMIZE_VARIABLES.email,WEB_URL)
     })
 
     // Go to customize from the search bar icon
