@@ -1,12 +1,11 @@
 import { CUSTOMIZE_VARIABLES  } from './customize_mapping_var';
-import { WEB_URL } from '../../url'
 /**
  * This fnction to sign in
  * @param {string}           password password 
  * @param {string}           email    email.
  */
 
- export function signIn(password,email){
+ export function signIn(password,email,WEB_URL){
     cy.visit(WEB_URL)
     cy.get('#root > .MainPage_bodyMainPage__2bmsj > .MainPage_container__3VWBn > .MainPage_content__3Ccvh > .MainPage_buttonWrapper__1Oxaq > .MainPage_login__27tt_').contains('Log in').click({force: true})
     cy.get('input[name="email"]').type(email).should("be.visible")
