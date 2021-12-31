@@ -140,7 +140,7 @@ def wrong_email_or_pass(email,password, msg):
     text = driver.find_element_by_accessibility_id(log_in_mapping.WRONG_EMAIL_OR_PASS_ACC_ID).get_attribute('content-desc')
     assert msg, text
     return text
-def working_log_in(email, password):
+def working_log_in(driver, email, password):
     """it tests ideal case to log in with correct email and password 
     Parameters
     -----------
@@ -149,7 +149,6 @@ def working_log_in(email, password):
     password : str
         input password to be tested
     """
-    driver = webdriver.Remote("http://localhost:4723/wd/hub", desiredcapabilities.desired_cap)
     driver.find_element_by_accessibility_id(log_in_mapping.FIRST_LOG_IN_BUTTON_ID).click()
     driver.implicitly_wait(10)
     driver.find_element_by_accessibility_id(log_in_mapping.LOG_IN_WITH_EMAIL_ID).click()
@@ -160,13 +159,13 @@ def working_log_in(email, password):
     element.send_keys(email)
     driver.implicitly_wait(50)
     
-    driver.find_element_by_xpath(log_in_mapping.SCROLL_VIEW_XPATH).click()
+    # driver.find_element_by_xpath(log_in_mapping.SCROLL_VIEW_XPATH).click()
     element = driver.find_element_by_xpath(log_in_mapping.INPUT_PASSWORD_XPATH)
     element.click()
     element.send_keys(password)
     driver.implicitly_wait(30)
 
-    driver.find_element_by_xpath(log_in_mapping.SCROLL_VIEW_XPATH).click()
+    # driver.find_element_by_xpath(log_in_mapping.SCROLL_VIEW_XPATH).click()
     try:
         driver.find_element_by_xpath(log_in_mapping.LOGIN_BUTTON_XPATH).click()
     except:

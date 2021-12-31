@@ -9,4 +9,12 @@ desired_cap = {
   "appium:appPackage": "com.example.tumblrx",
   "appium:appActivity": "com.example.tumblrx.MainActivity"
 }
+desiredcap = {
+  "platformName": "Android",
+  "appium:platformVersion": "10.0",
+  "appium:deviceName": "Nada",
+  "appium:automationName": "Appium",
+  "appium:appPackage": "com.example.tumblrx",
+  "appium:appActivity": "com.example.tumblrx.MainActivity"
+}
 

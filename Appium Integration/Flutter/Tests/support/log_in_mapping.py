@@ -8,7 +8,7 @@ LOGIN_BUTTON_XPATH = "//android.widget.Button[@content-desc=\"Login\"]"
 SCROLL_VIEW_XPATH = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText[2]"
 
 ########################
-INPUT_PASSWORD_XPATH ="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText[2]"
+INPUT_PASSWORD_XPATH ="	/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]"
 EMAIL_XPATH_AFTER_ERROR = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText[1]"
 EMPTY_EMAIL_EROR_MSG_ACC_ID = "Please enter some text"
 WRONG_EMAIL_OR_PASS_ACC_ID = "wrong Email or password please try again"
