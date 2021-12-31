@@ -1,4 +1,5 @@
 import { CUSTOMIZE_VARIABLES  } from './customize_mapping_var';
+import { HOME_VARIABLES  } from './home_mapping_var';
 /**
  * This fnction to sign in
  * @param {string}           password password 
@@ -7,10 +8,10 @@ import { CUSTOMIZE_VARIABLES  } from './customize_mapping_var';
 
  export function signIn(password,email,WEB_URL){
     cy.visit(WEB_URL)
-    cy.get('#root > .MainPage_bodyMainPage__2bmsj > .MainPage_container__3VWBn > .MainPage_content__3Ccvh > .MainPage_buttonWrapper__1Oxaq > .MainPage_login__27tt_').contains('Log in').click({force: true})
-    cy.get('input[name="email"]').type(email).should("be.visible")
-    cy.get('input[name="password"]').type(password).should("be.visible")
-    cy.get('input[id="login"]').contains('Log in').click({force: true})
+    cy.get(HOME_VARIABLES.LOGIN_WITH_EMAIL_BUTTON).contains('Log in').click({force: true})
+    cy.get(HOME_VARIABLES.INPUT_EMAIL).type(email).should("be.visible")
+    cy.get(HOME_VARIABLES.INPUT_PASSWORD).type(password).should("be.visible")
+    cy.get(HOME_VARIABLES.LOGIN_BUTTON).contains('Log in').click({force: true})
 }
 
 /**
