@@ -33,5 +33,3 @@ def create_post(text):
     except:
         return False
 
-login("mennaahmedali77@gmail.com","1234567menna")
-create_post("by a test script2")
