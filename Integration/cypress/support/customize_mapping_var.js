@@ -7,7 +7,9 @@
   *  for settings icon in the dropdown menu when account icon is clicked
   * @const 
   * */
- const EDIT_APPEARANCE_ICON = '#root > div > .NavBar_navbar__2Ztou > .NavBar_container__1Z4JI > div:nth-child(4) > .NavBar_icons__2zmsz > div:nth-child(9) > div > ul:nth-child(4) > a:nth-child(6)'
+//  const EDIT_APPEARANCE_ICON = '#root > div > .NavBar_navbar__2Ztou > .NavBar_container__1Z4JI > div:nth-child(4) > .NavBar_icons__2zmsz > div:nth-child(9) > div > ul:nth-child(4) > a:nth-child(6)'
+//  const EDIT_APPEARANCE_ICON = '#root > div > div > div > div:nth-child(4) > div > div:nth-child(9) > div > ul:nth-child(4) > a:nth-child(2)'
+const EDIT_APPEARANCE_ICON = 'a[href="/customize"]'
  
 //  const TITLE_TEXTBOX ="#root > div > div > div:nth-child(2) > ul:nth-child(2) > li > input"
 const TITLE_TEXTBOX = 'input[id="t1"]' 

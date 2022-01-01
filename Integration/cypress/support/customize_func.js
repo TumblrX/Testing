@@ -7,7 +7,9 @@ import { HOME_VARIABLES  } from './home_mapping_var';
  */
 
  export function signIn(password,email,WEB_URL){
-    cy.visit(WEB_URL)
+    // cy.visit(WEB_URL)
+    cy.visit("https://tumblrx.me")
+    // cy.visit('http://tumblrx.me:4000/') 
     cy.get(HOME_VARIABLES.LOGIN_WITH_EMAIL_BUTTON).contains('Log in').click({force: true})
     cy.get(HOME_VARIABLES.INPUT_EMAIL).type(email).should("be.visible")
     cy.get(HOME_VARIABLES.INPUT_PASSWORD).type(password).should("be.visible")
@@ -19,6 +21,7 @@ import { HOME_VARIABLES  } from './home_mapping_var';
  */
 
  export function customizeIconClicked(){
+    cy.wait(5000)
     cy.get(CUSTOMIZE_VARIABLES.ACCOUNT_ICON).click({multiple: true})
     cy.get(CUSTOMIZE_VARIABLES.EDIT_APPEARANCE_ICON).click({multiple: true})
 }
@@ -30,7 +33,7 @@ import { HOME_VARIABLES  } from './home_mapping_var';
 
     cy.wait(5000)
     cy.get(CUSTOMIZE_VARIABLES.TITLE_TEXTBOX).clear().type(newTitle)
-    // cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
+    cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
 
 }
 
@@ -70,7 +73,7 @@ import { HOME_VARIABLES  } from './home_mapping_var';
  export function changeAvatarSquare(){
     cy.get(CUSTOMIZE_VARIABLES.AVATAR_SQUARE_BUTTON).click({multiple: true,force:true})
     cy.wait(2000)
-    // cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
+    cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
     
 }
 /**
@@ -78,7 +81,7 @@ import { HOME_VARIABLES  } from './home_mapping_var';
  */
  export function changeBackground(){
     cy.get(CUSTOMIZE_VARIABLES.CHANGE_BACKGROUND_COLOR_BUTTON).invoke('attr', 'value', '#5c3506').should('have.attr', 'value','#5c3506')
-    // cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
+    cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
     
 }
 /**
@@ -87,7 +90,7 @@ import { HOME_VARIABLES  } from './home_mapping_var';
  export function changeTitleColor(){
     cy.get(CUSTOMIZE_VARIABLES.CHANGE_TITLE_COLOR_BUTTON).invoke('attr', 'value', '#5c3566').should('have.attr', 'value','#5c3566')
 
-    // cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
+    cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
     
 }
 /**
@@ -96,6 +99,6 @@ import { HOME_VARIABLES  } from './home_mapping_var';
  export function showImageHeader(){
     cy.get(CUSTOMIZE_VARIABLES.TOGGLE_HEADER_IMAGE).click({multiple:true})
 
-    // cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
+    cy.get(CUSTOMIZE_VARIABLES.SAVE_BUTTON).click()
     
 }

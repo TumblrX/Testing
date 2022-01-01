@@ -1,2 +1,0 @@
-cd node_modules/.bin/
-npm run cypress:open

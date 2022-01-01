@@ -6,8 +6,8 @@ import { VARIABLES } from './log_in_mapping_var';
  */
 export function workingLogIn() {
     cy.get(VARIABLES.BEGIN_LOG_IN).contains('Log in').click({ force: true })
-    cy.get(VARIABLES.INPUT_EMAIL).type("test@test.com").should("be.visible")
-    cy.get(VARIABLES.INPUT_PASSWORD).click({ force: true }).type("Test#123").should("be.visible")
+    cy.get(VARIABLES.INPUT_EMAIL).type("Ammar@gmail.com").should("be.visible")
+    cy.get(VARIABLES.INPUT_PASSWORD).click({ force: true }).type("123456").should("be.visible")
     cy.get(VARIABLES.LOG_IN_ACTION).contains('Log in').click({ force: true })
     cy.url().should('include', '/dashboard')
 }

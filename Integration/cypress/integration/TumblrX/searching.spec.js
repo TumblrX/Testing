@@ -5,7 +5,7 @@
 
 // describe('Searching', () => {
 //   beforeEach(() => {
-//     cy.visit(WEB_URL)
+//     cy.visit(WEB_URL) 
 //     cy.workingLogIn()
 //   })
 //   it("is there placeholder", function () {

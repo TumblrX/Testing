@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-01T19:03:42.472Z",
+    "end": "2022-01-01T19:04:52.678Z",
+    "duration": 70206,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e99da618-f938-44c7-90ad-6a167c1a001a",
+      "title": "",
+      "fullFile": "cypress/integration/TumblrX/searching.spec.js",
+      "file": "cypress/integration/TumblrX/searching.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ac2bf685-abcc-4a7f-8e7d-04e237db55a4",
+          "title": "Searching",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "is there placeholder",
+              "fullTitle": "Searching is there placeholder",
+              "timedOut": null,
+              "duration": 23877,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _searching_func.placeholderExistance)('Search Tumblr');",
+              "err": {},
+              "uuid": "d909afb9-ca80-49ad-8dc8-f5b320f54948",
+              "parentUUID": "ac2bf685-abcc-4a7f-8e7d-04e237db55a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test empty search",
+              "fullTitle": "Searching test empty search",
+              "timedOut": null,
+              "duration": 8376,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _searching_func.searchAndRoutes)(\"\", '/explore/recommended-for-you'); //-- tsetExplorePage()",
+              "err": {},
+              "uuid": "4807ef99-5e6d-4181-b6c0-21b02ad114fd",
+              "parentUUID": "ac2bf685-abcc-4a7f-8e7d-04e237db55a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test only spaces",
+              "fullTitle": "Searching test only spaces",
+              "timedOut": null,
+              "duration": 7848,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _searching_func.searchAndRoutes)(\" \", '/explore/'); //-- tsetExplorePage()",
+              "err": {},
+              "uuid": "fd79840c-82c7-41d3-986d-9f5f687d1b3d",
+              "parentUUID": "ac2bf685-abcc-4a7f-8e7d-04e237db55a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test text with spaces in",
+              "fullTitle": "Searching test text with spaces in",
+              "timedOut": null,
+              "duration": 8090,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _searching_func.searchAndRoutes)(\"nada   1111111a\", '/search/nada1111111a');\n(0, _searching_func.tsetSearchPage)(\"nada 1111111a\");",
+              "err": {},
+              "uuid": "40bef5be-6d3a-460c-b7e6-d3155f95d8aa",
+              "parentUUID": "ac2bf685-abcc-4a7f-8e7d-04e237db55a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "knowen word",
+              "fullTitle": "Searching knowen word",
+              "timedOut": null,
+              "duration": 7472,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _searching_func.searchAndRoutes)(\"test\", \"/search/test\");\n(0, _searching_func.tsetSearchPage)(\"test\");",
+              "err": {},
+              "uuid": "bc5bdef6-8278-47a6-a35b-ccc08b3ceebf",
+              "parentUUID": "ac2bf685-abcc-4a7f-8e7d-04e237db55a4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d909afb9-ca80-49ad-8dc8-f5b320f54948",
+            "4807ef99-5e6d-4181-b6c0-21b02ad114fd",
+            "fd79840c-82c7-41d3-986d-9f5f687d1b3d",
+            "40bef5be-6d3a-460c-b7e6-d3155f95d8aa",
+            "bc5bdef6-8278-47a6-a35b-ccc08b3ceebf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 55663,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

@@ -9,8 +9,8 @@ import { HOME_VARIABLES  } from './home_mapping_var';
  */
 
  export function signIn(password,email,WEB_URL){
-    cy.visit(WEB_URL)
-    // cy.visit("https://tumblrx.me")
+    // cy.visit(WEB_URL)
+    cy.visit("https://tumblrx.me")
     cy.get(HOME_VARIABLES.LOGIN_WITH_EMAIL_BUTTON).contains('Log in').click({force: true})
     cy.get(HOME_VARIABLES.INPUT_EMAIL).type(email).should("be.visible")
     cy.get(HOME_VARIABLES.INPUT_PASSWORD).type(password).should("be.visible")

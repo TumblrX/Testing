@@ -1,0 +1,177 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-01-01T19:01:38.549Z",
+    "end": "2022-01-01T19:03:15.441Z",
+    "duration": 96892,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "71a2cff7-590b-43de-acfe-019c672fc7c1",
+      "title": "",
+      "fullFile": "cypress/integration/TumblrX/message.spec.js",
+      "file": "cypress/integration/TumblrX/message.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c6d913b-900d-430f-9f57-a5bbe34c6e58",
+          "title": "Message",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "send a message to frind",
+              "fullTitle": "Message send a message to frind",
+              "timedOut": null,
+              "duration": 23385,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _message_func.sendMsgForFriend)(\"hello from web\");",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'includes')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'includes')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at ChatContent (http://tumblrx.me:4000/static/js/main.chunk.js:21028:75)\n    at renderWithHooks (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:70217:22)\n    at mountIndeterminateComponent (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:72979:17)\n    at beginWork (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:74178:20)\n    at HTMLUnknownElement.callCallback (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59167:18)\n    at Object.invokeGuardedCallbackDev (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59216:20)\n    at invokeGuardedCallback (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59276:35)\n    at beginWork$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:79018:11)\n    at performUnitOfWork (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77854:16)\n    at workLoopSync (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77791:9)\n    at renderRootSync (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77757:11)\n    at performSyncWorkOnRoot (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77374:22)\n    at http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66627:30\n    at unstable_runWithPriority (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:492174:16)\n    at runWithPriority$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66573:14)\n    at flushSyncCallbackQueueImpl (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66622:13)\n    at flushSyncCallbackQueue (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66610:7)\n    at batchedUpdates$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77468:11)\n    at Object.notify (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484251:7)\n    at Object.notifyNestedSubs (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484321:15)\n    at handleChangeWrapper (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484326:20)\n    at dispatch (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:490562:7)\n    at http://tumblrx.me:4000/static/js/vendors~main.chunk.js:490233:16\n    at Object.dispatch (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:986:32)\n    at handleOpenChat (http://tumblrx.me:4000/static/js/main.chunk.js:49809:62)",
+                "diff": null
+              },
+              "uuid": "4a23799f-fe70-4c29-bfe5-1f9873d36812",
+              "parentUUID": "6c6d913b-900d-430f-9f57-a5bbe34c6e58",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "send a message to new frind",
+              "fullTitle": "Message send a message to new frind",
+              "timedOut": null,
+              "duration": 36032,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _message_func.sendMsgForNewFriend)(\"Menna57\", \"hello from web\");",
+              "err": {},
+              "uuid": "292033a6-0b19-470f-b917-06bf2df447f1",
+              "parentUUID": "6c6d913b-900d-430f-9f57-a5bbe34c6e58",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "sound settings route",
+              "fullTitle": "Message sound settings route",
+              "timedOut": null,
+              "duration": 10153,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _message_func.tsetSoundSettingRoute)();",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'includes')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'includes')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at ChatContent (http://tumblrx.me:4000/static/js/main.chunk.js:21028:75)\n    at renderWithHooks (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:70217:22)\n    at mountIndeterminateComponent (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:72979:17)\n    at beginWork (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:74178:20)\n    at HTMLUnknownElement.callCallback (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59167:18)\n    at Object.invokeGuardedCallbackDev (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59216:20)\n    at invokeGuardedCallback (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59276:35)\n    at beginWork$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:79018:11)\n    at performUnitOfWork (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77854:16)\n    at workLoopSync (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77791:9)\n    at renderRootSync (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77757:11)\n    at performSyncWorkOnRoot (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77374:22)\n    at http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66627:30\n    at unstable_runWithPriority (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:492174:16)\n    at runWithPriority$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66573:14)\n    at flushSyncCallbackQueueImpl (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66622:13)\n    at flushSyncCallbackQueue (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66610:7)\n    at batchedUpdates$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77468:11)\n    at Object.notify (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484251:7)\n    at Object.notifyNestedSubs (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484321:15)\n    at handleChangeWrapper (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484326:20)\n    at dispatch (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:490562:7)\n    at http://tumblrx.me:4000/static/js/vendors~main.chunk.js:490233:16\n    at Object.dispatch (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:986:32)\n    at handleOpenChat (http://tumblrx.me:4000/static/js/main.chunk.js:49809:62)",
+                "diff": null
+              },
+              "uuid": "6b348a4c-4adb-4042-afe0-19402edd64e0",
+              "parentUUID": "6c6d913b-900d-430f-9f57-a5bbe34c6e58",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "delete conversation",
+              "fullTitle": "Message delete conversation",
+              "timedOut": null,
+              "duration": 11552,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _message_func.tsetDeleteConversation)();",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'includes')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'includes')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at ChatContent (http://tumblrx.me:4000/static/js/main.chunk.js:21028:75)\n    at renderWithHooks (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:70217:22)\n    at mountIndeterminateComponent (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:72979:17)\n    at beginWork (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:74178:20)\n    at HTMLUnknownElement.callCallback (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59167:18)\n    at Object.invokeGuardedCallbackDev (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59216:20)\n    at invokeGuardedCallback (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:59276:35)\n    at beginWork$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:79018:11)\n    at performUnitOfWork (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77854:16)\n    at workLoopSync (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77791:9)\n    at renderRootSync (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77757:11)\n    at performSyncWorkOnRoot (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77374:22)\n    at http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66627:30\n    at unstable_runWithPriority (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:492174:16)\n    at runWithPriority$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66573:14)\n    at flushSyncCallbackQueueImpl (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66622:13)\n    at flushSyncCallbackQueue (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:66610:7)\n    at batchedUpdates$1 (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:77468:11)\n    at Object.notify (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484251:7)\n    at Object.notifyNestedSubs (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484321:15)\n    at handleChangeWrapper (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:484326:20)\n    at dispatch (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:490562:7)\n    at http://tumblrx.me:4000/static/js/vendors~main.chunk.js:490233:16\n    at Object.dispatch (http://tumblrx.me:4000/static/js/vendors~main.chunk.js:986:32)\n    at handleOpenChat (http://tumblrx.me:4000/static/js/main.chunk.js:49809:62)",
+                "diff": null
+              },
+              "uuid": "0b5f85f4-c8b3-43f2-abea-356e74c51567",
+              "parentUUID": "6c6d913b-900d-430f-9f57-a5bbe34c6e58",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "292033a6-0b19-470f-b917-06bf2df447f1"
+          ],
+          "failures": [
+            "4a23799f-fe70-4c29-bfe5-1f9873d36812",
+            "6b348a4c-4adb-4042-afe0-19402edd64e0",
+            "0b5f85f4-c8b3-43f2-abea-356e74c51567"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 81122,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

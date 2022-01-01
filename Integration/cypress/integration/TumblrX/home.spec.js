@@ -38,7 +38,7 @@
         
 //     })
 
-//     // add link 
+//     // reblog
 //      it("reblog post ",function(){
 
 //         reblog()

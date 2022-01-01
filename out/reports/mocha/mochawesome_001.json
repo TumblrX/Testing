@@ -1,0 +1,246 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 1,
+    "pending": 0,
+    "failures": 6,
+    "start": "2022-01-01T18:58:09.218Z",
+    "end": "2022-01-01T18:59:54.466Z",
+    "duration": 105248,
+    "testsRegistered": 7,
+    "passPercent": 14.285714285714285,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6facbc89-5029-483a-abe6-6d4b9dda060b",
+      "title": "",
+      "fullFile": "cypress/integration/TumblrX/home.spec.js",
+      "file": "cypress/integration/TumblrX/home.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "547639bb-c7a0-431b-b1a1-8d2cbdb0d52c",
+          "title": "Test Home",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "sign in",
+              "fullTitle": "Test Home sign in",
+              "timedOut": null,
+              "duration": 25455,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _home_func.signIn)(HOME_VARIABLES.password, HOME_VARIABLES.email, _url.WEB_URL);",
+              "err": {},
+              "uuid": "17280e8b-94cd-4423-9e91-e13512830a48",
+              "parentUUID": "547639bb-c7a0-431b-b1a1-8d2cbdb0d52c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create post",
+              "fullTitle": "Test Home create post",
+              "timedOut": null,
+              "duration": 16748,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _home_func.addPost)(\"creating by a test script\", \"post3\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > p`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > p`, but never found it.\n    at addPost (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:202:57)\n    at Context.eval (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:115:28)",
+                "diff": null
+              },
+              "uuid": "6fe85de8-a571-4319-9d03-d125b5a431fe",
+              "parentUUID": "547639bb-c7a0-431b-b1a1-8d2cbdb0d52c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "like post",
+              "fullTitle": "Test Home like post",
+              "timedOut": null,
+              "duration": 9388,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _home_func.likePost)();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > footer > div:nth-child(2) > div:nth-child(3)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > footer > div:nth-child(2) > div:nth-child(3)`, but never found it.\n    at likePost (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:228:6)\n    at Context.eval (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:119:29)",
+                "diff": null
+              },
+              "uuid": "5c37c08e-b4ff-4e2f-acdf-66f1f61dcced",
+              "parentUUID": "547639bb-c7a0-431b-b1a1-8d2cbdb0d52c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "comment post",
+              "fullTitle": "Test Home comment post",
+              "timedOut": null,
+              "duration": 16507,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _home_func.addComment)(\"This comment is created via automated test script\");",
+              "err": {
+                "message": "AssertionError: expected '3 notes' to equal '1 notes'",
+                "estack": "AssertionError: expected '3 notes' to equal '1 notes'\n    at Context.eval (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:262:22)",
+                "diff": "- '3 notes'\n+ '1 notes'\n"
+              },
+              "uuid": "9ddfd1ce-465a-4303-ade2-89e9b259284a",
+              "parentUUID": "547639bb-c7a0-431b-b1a1-8d2cbdb0d52c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "delete post",
+              "fullTitle": "Test Home delete post",
+              "timedOut": null,
+              "duration": 19956,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _home_func.deletePost)(\"post3\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > footer > div:nth-child(2) > div:nth-child(4) > svg`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > footer > div:nth-child(2) > div:nth-child(4) > svg`, but never found it.\n    at deletePost (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:214:6)\n    at Context.eval (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:127:31)",
+                "diff": null
+              },
+              "uuid": "00233256-328d-4082-ab00-2b09eced15ed",
+              "parentUUID": "547639bb-c7a0-431b-b1a1-8d2cbdb0d52c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "reblog post ",
+              "fullTitle": "Test Home reblog post ",
+              "timedOut": null,
+              "duration": 4654,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _home_func.reblog)();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div > div > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > footer > div:nth-child(2) > div:nth-child(2) > svg`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div > div > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > footer > div:nth-child(2) > div:nth-child(2) > svg`, but never found it.\n    at reblog (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:295:6)\n    at Context.eval (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:131:27)",
+                "diff": null
+              },
+              "uuid": "6e1eac92-f136-4b80-8394-65f689919ed2",
+              "parentUUID": "547639bb-c7a0-431b-b1a1-8d2cbdb0d52c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add Link",
+              "fullTitle": "Test Home Add Link",
+              "timedOut": null,
+              "duration": 4627,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _home_func.addLink)(\"cypress\", \"https://docs.cypress.io/api/commands/route#Without-Stubbing\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div > div > div > div:nth-child(2) > div > a:nth-child(4)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root > div:nth-child(2) > div > div > div > div > div:nth-child(2) > div > a:nth-child(4)`, but never found it.\n    at addLink (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:271:6)\n    at Context.eval (https://tumblrx.me/__cypress/tests?p=cypress/integration/TumblrX/home.spec.js:135:28)",
+                "diff": null
+              },
+              "uuid": "bdda7c4b-0724-4ba6-9f8f-5a4c9ca5169d",
+              "parentUUID": "547639bb-c7a0-431b-b1a1-8d2cbdb0d52c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "17280e8b-94cd-4423-9e91-e13512830a48"
+          ],
+          "failures": [
+            "6fe85de8-a571-4319-9d03-d125b5a431fe",
+            "5c37c08e-b4ff-4e2f-acdf-66f1f61dcced",
+            "9ddfd1ce-465a-4303-ade2-89e9b259284a",
+            "00233256-328d-4082-ab00-2b09eced15ed",
+            "6e1eac92-f136-4b80-8394-65f689919ed2",
+            "bdda7c4b-0724-4ba6-9f8f-5a4c9ca5169d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 97335,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

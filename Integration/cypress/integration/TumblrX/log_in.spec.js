@@ -6,6 +6,7 @@
 // describe('Log In', () => {
 //   beforeEach(() => {
 //     cy.visit(WEB_URL)
+//     cy.visit('http://tumblrx.me:4000/') 
 //   })
 //   it("invalid email log in", function () {
 //     invalidEmailLogIn("nadaelsayed163@ex", 'Your email or password were incorrect.')
