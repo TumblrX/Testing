@@ -17,4 +17,12 @@ desiredcap = {
   "appium:appPackage": "com.example.tumblrx",
   "appium:appActivity": "com.example.tumblrx.MainActivity"
 }
-
+DESIRED_CAP = {
+  "platformName": "Android",
+  "appium:platformVersion": "6.0.0",
+  "appium:deviceName": "Infinix HOT 4",
+  "appium:automationName": "UiAutomator1",
+  "appium:udid": "02002106A1205886",
+  "appium:appPackage": "com.example.tumblrx",
+  "appium:appActivity": "com.example.tumblrx.MainActivity"
+}
